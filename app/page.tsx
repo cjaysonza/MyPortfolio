@@ -63,7 +63,7 @@ export default function Page() {
           <div className="bg-[#3c569c]/50 rounded-2xl shadow p-6 text-center transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl tron-border">
             <div className="flex justify-center">
               <Image
-                src="/assets/cjaysonzapfp.png"
+                src="/cjaysonzapfp.png"
                 alt="Profile Photo"
                 width={160}
                 height={160}
