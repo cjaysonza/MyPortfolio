@@ -1,11 +1,11 @@
 import Link from "next/link";
-import About from "../about/page.jsx";
+import About from "../projects/page.jsx";
 
 export default function Header() {
   return (
     <>
       {/* This is our new header  */}
-      <div className="sticky top-0 bg-[#1d212c] tron-border-bottom">
+      <div className="sticky top-0 bg-[#1d212c] tron-border-bottom z-50">
         {" "}
         {/* positioning */}
         <div className="flex flex-row justify-between items-center h-24 px-40">
@@ -30,9 +30,9 @@ export default function Header() {
             </Link>
             <Link
               className="text-lg p-1 hover:bg-blue-500 hover:text-grey-100 rounded"
-              href="/about"
+              href="/projects"
             >
-              About
+              Projects
             </Link>
             <Link
               className="text-lg p-1 hover:bg-blue-500 hover:text-grey-100 rounded"

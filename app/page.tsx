@@ -1,383 +1,250 @@
+// import Image from "next/image";
+
+// export default function Home() {
+//   return (
+//     <div className="flex min-h-screen items-center justify-center bg-[#1d212c]">
+//       <h2>This is the Main Component</h2>
+//     </div>
+//   );
+// }
 "use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faLocationDot,
+  faEnvelope,
+  faGraduationCap,
+  faBriefcase,
+  faChalkboardTeacher,
+  faVideo,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faYoutube,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import {
-  Github,
-  Mail,
-  ChevronDown,
-  Terminal,
-  Code2,
-  Globe,
-  Database,
-  Cpu,
-} from "lucide-react";
 
-export default function Home() {
-  return (
-    // <div className="flex min-h-screen items-center justify-center bg-[#1d212c]">
-    //   <h2>This is the Main Component</h2>
-    // </div>
-    <motion.main
-      initial="hidden"
-      animate="visible"
-      variants={fadeInUp}
-      className="bg-slate-950 text-cyan-400 font-mono relative overflow-x-hidden selection:bg-cyan-500 selection:text-black"
-    >
-      {/* 👾 BACKGROUND EFFECTS */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div> */}
-        {/* <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-cyan-500 opacity-20 blur-[100px]"></div> */}
-      </div>
+/**
+ * NOTE:
+ * - This page is intentionally a Client Component to avoid hydration/runtime issues
+ *   with dynamic inline styles and mapped JSX.
+ * - All dynamic values are fully defined and non-null.
+ */
 
-      {/* 📦 MAIN CONTENT */}
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        {/* (Home) */}
-        <section className="min-h-screen flex flex-col justify-center pt-10 pb-20">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col-reverse md:flex-row items-center justify-center gap-16 md:gap-24"
-          >
-            {/* Text Side */}
-            <div className="space-y-8 text-center md:text-left max-w-2xl">
-              <div className="inline-block px-4 py-2 bg-cyan-950/50 border border-cyan-800 rounded text-sm tracking-wider text-cyan-300 mb-2">
-                NerfedD
-              </div>
-              <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white drop-shadow-[0_0_25px_rgba(34,211,238,0.4)]">
-                CHRISTIAN JAY <span className="text-cyan-500">SONZA</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-slate-400 leading-relaxed border-l-4 border-cyan-900 pl-6">
-                Computer Science Student. <br />
-                Aspiring <span className="text-white">
-                  Game Developer
-                </span> & <span className="text-white">Full-Stack Dev</span>.
-              </p>
-              <div className="flex justify-center md:justify-start gap-6 pt-4">
-                <SocialButton
-                  href="https://github.com/NerfedD"
-                  icon={Github}
-                  label="GitHub"
-                />
-                <SocialButton
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=patnugot0304@gmail.com"
-                  icon={Mail}
-                  label="Gmail"
-                />
-              </div>
-            </div>
-
-            {/* Photo Side */}
-            <div className="relative shrink-0 group">
-              <div className="absolute inset-0 border-2 border-dashed border-cyan-500/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-900 shadow-[0_0_50px_rgba(6,182,212,0.4)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.6)] transition-all duration-500">
-                <img
-                  src="/assets/cjaysonzapfp.png"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="absolute bottom-12 left-0 right-0 flex justify-center animate-bounce text-slate-500"
-          >
-            <ChevronDown size={40} />
-          </motion.div>
-        </section>
-
-        {/* 📜 ABOUT ME SECTION */}
-        <section id="about" className="py-32 relative scroll-mt-24">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="max-w-5xl mx-auto bg-slate-900/50 border border-slate-800 p-8 md:p-12 rounded-2xl backdrop-blur-sm"
-          >
-            {/* Header */}
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-cyan-900/30 rounded-full flex items-center justify-center border border-cyan-500/30 text-cyan-400">
-                <Terminal size={24} />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-white">CHARACTER BIO</h2>
-                <p className="text-xs text-slate-500 tracking-widest">
-                  CLASS: TECH EXPLORER
-                </p>
-              </div>
-            </div>
-
-            {/* Bio Text */}
-            <div className="space-y-6 text-slate-300 leading-relaxed text-lg mb-12">
-              <p>
-                I am a Computer Science student who believes technology has no
-                boundaries. My journey began with a fascination for{" "}
-                <span className="text-cyan-400 font-bold">
-                  Game Development
-                </span>
-                , learning how to build immersive worlds from scratch.
-              </p>
-              <p>
-                Along the way, I discovered the power of{" "}
-                <span className="text-pink-400 font-bold">
-                  Full-Stack Development
-                </span>
-                , realizing that great applications share the same DNA as great
-                games: interactivity, performance, and user experience.
-              </p>
-              <p className="border-l-4 border-cyan-500 pl-4 italic text-slate-400">
-                "I am not defined by a single stack; I am a developer constantly
-                scanning the horizon for new challenges."
-              </p>
-            </div>
-
-            {/* 🛠️ SKILL INVENTORY */}
-            <div>
-              <h3 className="text-sm font-bold text-slate-500 mb-6 tracking-widest uppercase border-b border-slate-800 pb-2">
-                Skill Inventory
-              </h3>
-
-              <motion.div
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4"
-              >
-                {/* Languages */}
-                <motion.div
-                  variants={fadeInUp}
-                  className="bg-slate-950 border border-slate-800 p-4 rounded-lg hover:border-cyan-500/50 transition-colors group"
-                >
-                  <div className="flex items-center gap-2 text-cyan-400 font-bold mb-2">
-                    <Code2 size={18} /> Languages
-                  </div>
-                  <div className="text-sm text-slate-400 group-hover:text-white transition-colors">
-                    Python • Java • C • JavaScript
-                  </div>
-                </motion.div>
-
-                {/* Frontend */}
-                <motion.div
-                  variants={fadeInUp}
-                  className="bg-slate-950 border border-slate-800 p-4 rounded-lg hover:border-pink-500/50 transition-colors group"
-                >
-                  <div className="flex items-center gap-2 text-pink-400 font-bold mb-2">
-                    <Globe size={18} /> Frontend
-                  </div>
-                  <div className="text-sm text-slate-400 group-hover:text-white transition-colors">
-                    React • Tailwind • HTML • CSS
-                  </div>
-                </motion.div>
-
-                {/* Backend */}
-                <motion.div
-                  variants={fadeInUp}
-                  className="bg-slate-950 border border-slate-800 p-4 rounded-lg hover:border-purple-500/50 transition-colors group"
-                >
-                  <div className="flex items-center gap-2 text-purple-400 font-bold mb-2">
-                    <Database size={18} /> Backend
-                  </div>
-                  <div className="text-sm text-slate-400 group-hover:text-white transition-colors">
-                    Node.js • SQL
-                  </div>
-                </motion.div>
-
-                {/* Core/Tools */}
-                <motion.div
-                  variants={fadeInUp}
-                  className="bg-slate-950 border border-slate-800 p-4 rounded-lg hover:border-green-500/50 transition-colors group"
-                >
-                  <div className="flex items-center gap-2 text-green-400 font-bold mb-2">
-                    <Cpu size={18} /> Core
-                  </div>
-                  <div className="text-sm text-slate-400 group-hover:text-white transition-colors">
-                    Problem Solving • Algorithms
-                  </div>
-                </motion.div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </section>
-
-        {/* 📂 PROJECT LOG */}
-        <section id="projects" className="py-32 scroll-mt-24 min-h-screen">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="flex items-center gap-4 mb-16"
-          >
-            <Terminal className="text-pink-500 w-8 h-8" />
-            <h2 className="text-3xl font-bold text-white tracking-widest uppercase">
-              Project Log
-            </h2>
-            <div className="h-px bg-slate-800 flex-grow"></div>
-          </motion.div>
-
-          {/* Grid Staggered Animation */}
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="grid gap-10 md:grid-cols-2"
-          >
-            {PROJECTS.map((project, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <ProjectCard {...project} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </section>
-
-        {/* FOOTER */}
-        <motion.footer
-          id="contact"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="pb-12 text-center text-slate-600 text-sm border-t border-slate-900 pt-12"
-        >
-          <p className="mt-2">
-            © {new Date().getFullYear()} NerfedD • PRESS START TO CONTINUE
-          </p>
-        </motion.footer>
-      </div>
-    </motion.main>
-  );
-}
-
-function SocialButton({
-  href,
-  icon: Icon,
-  label,
-}: {
-  href: string;
-  icon: React.ElementType;
-  label: string;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-3 bg-slate-900 border border-slate-700 hover:border-cyan-500 hover:text-cyan-400 text-slate-400 px-8 py-4 text-lg rounded hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 transform hover:-translate-y-1"
-    >
-      <Icon size={24} />
-      <span>{label}</span>
-    </a>
-  );
-}
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const PROJECTS = [
+const skills: { name: string; value: number }[] = [
+  { name: "NodeJS, ReactJS, NextJS", value: 70 },
+  { name: "GraphQL", value: 70 },
+  { name: "Python Fullstack Web Development using Odoo 18/19", value: 90 },
   {
-    title: "Project Alpha",
-    description:
-      "A web-based game engine using Three.js and React. Features a component-based architecture and a visual editor.",
-    tags: ["React", "Three.js", "WebGL", "TypeScript"],
-    status: "IN DEVELOPMENT",
-    icon: Code2,
-    theme: "cyan",
+    name: "Delphi Desktop and Fullstack Web Development using UNIGUI",
+    value: 90,
   },
-  {
-    title: "Portfolio v2",
-    description:
-      "This very portfolio you're looking at. Built with Next.js, Tailwind CSS and Framer Motion for that extra flair.",
-    tags: ["Next.js", "TailwindCSS", "Framer Motion"],
-    status: "LIVE",
-    icon: Globe,
-    theme: "pink",
-  },
-  {
-    title: "SQL Query Builder",
-    description:
-      "A Java-based desktop application for visually constructing complex SQL queries. Supports multiple database dialects.",
-    tags: ["Java", "Swing", "MySQL", "PostgreSQL"],
-    status: "ARCHIVED",
-    icon: Database,
-    theme: "purple",
-  },
+  { name: "HTML, Javascript, CSS", value: 90 },
+  { name: "Database Management using PostgreSQL, MySQL, MS SQL", value: 95 },
+  { name: "CRM (Go High Level, GHL)", value: 80 },
 ];
 
-function ProjectCard({
-  title,
-  description,
-  tags,
-  status,
-  icon: Icon,
-  theme,
-}: {
-  title: string;
-  description: string;
-  tags: string[];
-  status: string;
-  icon: React.ElementType;
-  theme: string;
-}) {
-  const colors: any = {
-    cyan: "hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group-hover:text-cyan-400 text-cyan-200/70 bg-cyan-900/30 text-cyan-400",
-    pink: "hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.15)] group-hover:text-pink-400 text-pink-200/70 bg-pink-900/30 text-pink-400",
-    purple:
-      "hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] group-hover:text-purple-400 text-purple-200/70 bg-purple-900/30 text-purple-400",
-  };
+const languages: { name: string; value: number }[] = [
+  { name: "English", value: 80 },
+  { name: "Filipino", value: 75 },
+  { name: "Cebuano", value: 67 },
+  { name: "French", value: 50 },
+];
 
-  const themeClass = colors[theme] || colors.cyan;
-  const borderClass = themeClass.split(" ").slice(0, 2).join(" ");
-  const textClass = themeClass.split(" ").slice(2, 3).join(" ");
-  const tagClass = themeClass.split(" ").slice(3, 4).join(" ");
-  const badgeClass = themeClass.split(" ").slice(4).join(" ");
-
+export default function Page() {
   return (
-    <div
-      className={`group relative bg-slate-900 border border-slate-800 p-8 rounded-xl transition-all duration-300 ${borderClass}`}
-    >
-      <div
-        className={`absolute top-0 right-0 text-xs font-bold px-3 py-1 rounded-bl-lg ${badgeClass}`}
-      >
-        {status}
-      </div>
-      <h3
-        className={`text-2xl font-bold text-white mb-3 transition-colors flex items-center gap-3 ${textClass}`}
-      >
-        <Icon size={24} /> {title}
-      </h3>
-      <p className="text-slate-400 text-base mb-6 leading-relaxed">
-        {description}
-      </p>
-      <div className="flex flex-wrap gap-2 text-sm font-bold text-slate-500">
-        {tags.map((tag: string) => (
-          <span
-            key={tag}
-            className={`bg-slate-800 px-3 py-1 rounded ${tagClass}`}
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    </div>
+    <main className="flex min-h-screen items-center justify-center bg-[#1d212c] pt-5">
+      <section className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* LEFT COLUMN */}
+        <aside className="space-y-6">
+          {/* Profile Card */}
+          <div className="bg-[#3c569c]/50 rounded-2xl shadow p-6 text-center transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl tron-border">
+            <div className="flex justify-center">
+              <Image
+                src="/assets/cjaysonzapfp.png"
+                alt="Profile Photo"
+                width={160}
+                height={160}
+                priority
+                className="rounded-full object-cover"
+              />
+            </div>
+
+            <h2 className="mt-4 text-xl font-semibold">Christian Jay Sonza</h2>
+            <p className="text-sm text-white-600 mt-1 italic">
+              Computer Science Professor . Software Engineer . Attorney .
+            </p>
+
+            <div className="mt-4 text-left space-y-3 text-sm">
+              <p className="flex items-center gap-2">
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  className="text-red-500"
+                />
+                Davao City, Philippines
+              </p>
+              <p className="flex items-center gap-2">
+                <FontAwesomeIcon icon={faEnvelope} color="#FFC03B" />
+                christianjaysonza@gmail.com
+              </p>
+              <p className="flex items-center gap-2 text-yellow-400 hover:underline cursor-pointer">
+                <FontAwesomeIcon icon={faYoutube} color="red" /> YouTube Channel
+              </p>
+              <p className="flex items-center gap-2 text-yellow-400 hover:underline cursor-pointer">
+                <FontAwesomeIcon icon={faLinkedin} /> LinkedIn Profile
+              </p>
+              <p className="flex items-center gap-2 text-yellow-400 hover:underline cursor-pointer">
+                <FontAwesomeIcon icon={faGithub} /> JavaScript GitHub Demos
+              </p>
+            </div>
+          </div>
+
+          {/* Skills */}
+          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="font-semibold mb-4">Skills</h3>
+
+            {skills.map((skill) => (
+              <div key={skill.name} className="mb-4">
+                <div className="flex justify-between text-sm mb-1">
+                  <span>{skill.name}</span>
+                  <span>{skill.value}%</span>
+                </div>
+                <div className="h-2 bg-gray-200 rounded">
+                  <div
+                    className="h-2 bg-blue-600 rounded"
+                    style={{ width: `${skill.value}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Languages */}
+          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="font-semibold mb-4">Languages Spoken</h3>
+
+            {languages.map((language) => (
+              <div key={language.name} className="mb-4">
+                <div className="flex justify-between text-sm mb-1">
+                  <span>{language.name}</span>
+                  <span>{language.value}%</span>
+                </div>
+                <div className="h-2 bg-gray-200 rounded">
+                  <div
+                    className="h-2 bg-blue-600 rounded"
+                    style={{ width: `${language.value}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </aside>
+
+        {/* RIGHT COLUMN */}
+        <section className="lg:col-span-2 space-y-6">
+          {/* About Me Header */}
+          <header className="flex items-center gap-2">
+            <span className="text-xl">👤</span>
+            <h2 className="text-4xl font-semibold">About Me</h2>
+          </header>
+
+          {/* Software Engineer */}
+          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="font-semibold">
+              💠 Software Engineer / Web Developer
+            </h3>
+            <p className="text-sm text-white mb-3">1996 – Present</p>
+            <p className="text-sm leading-relaxed">
+              Highly skilled software development professional bringing talents
+              for software design, development and integration. Offering
+              advanced knowledge of in-demand programming languages. Gained
+              extensive background in writing code and developing software
+              solutions to various local industry clients.
+            </p>
+            <p className="text-sm leading-relaxed mt-2">
+              Practices exemplary work ethics. Strives to exceed expectations
+              and prioritizes meeting deadlines without supervision. Aggressive
+              yet cheerful with colleagues. Constantly updates and trains on
+              recent developments on technologies and platforms, well trained in
+              ReactJS, NextJS, GraphQL and Odoo.
+            </p>
+            <p className="text-sm leading-relaxed mt-2">
+              Specializes in modernizing legacy systems using Delphi, UniGUI and
+              C#. An experienced Database Administrator with actual experience
+              in Windows Server Failover Clustering and Replication. An avid
+              Linux and Ubuntu user. Underwent training in CRM using Go High
+              Level (GHL).
+            </p>
+          </div>
+
+          {/* Instructor */}
+          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="font-semibold">
+              💠 Computer Science Instructor, Ateneo de Davao University
+            </h3>
+            <p className="text-sm text-white mb-3">November 1987 – Present</p>
+            <p className="text-sm leading-relaxed">
+              Conducts actual classroom instruction designed to achieve course
+              objectives aligned with the school’s mission and vision.
+              Collaborates with industry, makes project proposals for software
+              development, and develops and implements software solutions for
+              various aspects of operations.
+            </p>
+            <p className="text-sm leading-relaxed mt-2">
+              Mentors students, fostering a collaborative learning environment
+              that promotes innovation and knowledge sharing with industry
+              partners. Maintains very high standards in delivering classes and
+              is very rarely late or absent.
+            </p>
+          </div>
+
+          {/* Author */}
+          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="font-semibold">
+              💠 Author of Various YouTube Instructional Videos
+            </h3>
+            <p className="text-sm text-white mb-3">2021 – Present</p>
+            <p className="text-sm leading-relaxed">
+              Instructional videos on History of Computing, Boolean Logic and
+              Circuitverse, Assembly Language Programming, Database Desktop
+              Development using C#, and Introduction to JavaScript, HTML and
+              CSS.
+            </p>
+            <p className="text-sm mt-2 text-blue-600 hover:underline cursor-pointer">
+              www.youtube.com/@roytek7667/playlists
+            </p>
+          </div>
+
+          {/* Education */}
+          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="font-semibold mb-4">🎓 Education</h3>
+            <div className="mb-3">
+              <p className="text-sm font-medium">
+                1996 – Masters in Computer Science
+              </p>
+              <p className="text-sm text-white font-semibold">
+                Ateneo de Manila University
+              </p>
+              <p className="text-sm text-white font-semibold">
+                Quezon City, Philippines
+              </p>
+            </div>
+            <div>
+              <p className="text-sm font-medium">
+                1987 – BS in Management Engineering
+              </p>
+              <p className="text-sm text-white font-semibold">
+                Ateneo de Davao University
+              </p>
+              <p className="text-sm text-white font-semibold">
+                Davao City, Philippines
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
   );
 }
