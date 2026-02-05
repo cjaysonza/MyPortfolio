@@ -106,7 +106,7 @@ export default function ContactPage() {
           <ContactCard
             icon={faPhone}
             title="Call Me"
-            info="+639177054669"
+            info="+639772694138"
             iconColor="text-green-500"
             hoverBorderColor="hover:border-green-500"
           />
