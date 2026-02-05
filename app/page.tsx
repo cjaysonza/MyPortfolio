@@ -144,7 +144,7 @@ export default function Page() {
             <h3 className="text-lg md:text-xl font-semibold">
               💠 Software Engineer / FullStack Developer / Cyber Security Agent
             </h3>
-            <p className="text-sm md:text-lg text-white mb-3">2026 – Present</p>
+            <p className="text-sm md:text-lg text-white mb-3">2028 – Present</p>
             <p className="text-sm md:text-base leading-relaxed">
               Skilled software developer specializing in design, development,
               and integration. Proficient in in-demand programming languages
