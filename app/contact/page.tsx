@@ -90,7 +90,7 @@ export default function ContactPage() {
       {/* Content div */}
       <div className="relative mx-auto max-w-4xl z-10">
         <div className="flex justify-center pt-8">
-          <h1 className="inline-flex items-center gap-3 text-6xl font-semibold text-white">
+          <h1 className="inline-flex items-center gap-3 text-6xl font-semibold text-white ">
             You can find me here ;)
           </h1>
         </div>

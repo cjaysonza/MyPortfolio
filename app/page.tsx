@@ -142,79 +142,75 @@ export default function Page() {
           {/* Software Engineer */}
           <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
             <h3 className="text-lg md:text-xl font-semibold">
-              💠 Software Engineer / FullStack Developer / Cyber Security Agent
+              💠 Aspiring Software Developer, Ateneo de Davao University
             </h3>
-            <p className="text-sm md:text-lg text-white mb-3">2028 – Present</p>
+            <p className="text-sm md:text-lg text-white mb-3">2024 – Present</p>
             <p className="text-sm md:text-base leading-relaxed">
-              Skilled software developer specializing in design, development,
-              and integration. Proficient in in-demand programming languages
-              with extensive experience delivering software solutions to local
-              industry clients.
+              My interest in developing software that fixes everyday
+              inconveniences became a passion for development and integration,
+              and a curiosity towards web design and digital security. My
+              journey in programming began with a love for video games and
+              interest in creating mods for the games I played. This is what
+              engages me in creating technology that is innovative, and ignite a
+              passion of learning to make a program that is better than what I
+              made yesterday.
             </p>
             <p className="text-sm md:text-base leading-relaxed mt-2">
-              Demonstrates strong professional integrity and commitment to
-              excellence. Takes ownership of responsibilities and consistently
-              delivers quality work on schedule. Maintains a positive,
-              collaborative attitude while staying current with emerging
-              technologies and industry trends. Brings extensive expertise in
-              full-stack web and application development, with particular
-              proficiency in cyber security.
-            </p>
-            <p className="text-sm md:text-base leading-relaxed mt-2">
-              Specializes in modernizing legacy systems using C# and C++, with
-              deep expertise in cyber security. Brings hands-on experience in
-              robotics and automation programming using Python. Passionate
-              advocate for open-source solutions and leveraging emerging
-              technologies to create accessible, sustainable software that
-              empowers organizations and communities.
+              I have profound interest in modernizing legacy systems using C#
+              and C++. A deep curiosity in cyber security. Brings hands-on
+              experience in robotics and automation programming using Python.
+              Creative modder using Java for my friends' Minecraft shenanigans.
+              Passionate advocate for open-source solutions and leveraging
+              emerging technologies to create accessible, sustainable software
+              that empowers organizations and communities.
             </p>
           </div>
-
-          {/* Instructor */}
-          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+          {/* LGP */}
+          <div className="bg-[#9c3c3c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
             <h3 className="text-lg md:text-xl font-semibold">
-              💠 Computer Science Instructor, Ateneo de Davao University
+              💠 Learner Government Program (Department of Education)
             </h3>
-            <p className="text-sm md:text-lg text-white mb-3">
-              September 2028 – Present
-            </p>
-            <p className="text-sm md:text-base leading-relaxed">
-              Delivers engaging classroom instruction to fulfill course learning
-              outcomes in alignment with institutional goals. Partners with
-              industry stakeholders, proposes innovative software development
-              projects, and creates tailored software solutions to support
-              organizational operations.
-            </p>
-            <p className="text-sm md:text-base leading-relaxed mt-2">
-              Guides students through collaborative learning experiences that
-              encourage creative problem-solving and partnership with industry
-              professionals. Maintains exceptional teaching standards with
-              outstanding attendance and punctuality.
-            </p>
-          </div>
-
-          {/* Author */}
-          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
-            <h3 className="text-lg md:text-xl font-semibold">
-              💠 Attorney VI (Department of Education)
-            </h3>
-            <p className="text-sm md:text-lg text-white mb-3">2033 - Present</p>
+            <p className="text-sm md:text-lg text-white mb-3">2022 - 2024</p>
             <p className="text-sm md:text-base leading-relaxed">
               During Senior High School (SHS), was a prominent and actively
               participating member of Student Leadership engagements throughout
               the Philippines. Has been a President of the Supreme Secondary
               Learner Government in a Division(Davao del Sur) and Regional
-              (Region XI), and has been part of the National Federation of
-              Supreme Secondary Learner Government (NFSSLG) of batch 2023.
+              (Region XI), and has been Board Member of the National Federation
+              of Supreme Secondary Learner Government (NFSSLG) of batch
+              2023-2024.
             </p>
             <p className="text-sm md:text-base leading-relaxed mt-2">
-              Has since participated in many speaker roles throughout Region XI
-              and continues to serve the people of the Philippines as an
-              Attorney for the Department of Education.
+              I have since participated in many speaker roles throughout Region
+              XI and continues to exchange and promulgate my experience in Good
+              Governance and Team Building.
             </p>
             {/* <p className="text-sm md:text-lg mt-2 text-blue-600 hover:underline cursor-pointer">
               www.youtube.com/@roytek7667/playlists
             </p> */}
+          </div>
+
+          {/* EIC */}
+          <div className="bg-[#24770f] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="text-lg md:text-xl font-semibold">
+              💠 Editor-in-Chief, Campus Journalism
+            </h3>
+            <p className="text-sm md:text-lg text-white mb-3">2020 – 2024</p>
+            <p className="text-sm md:text-base leading-relaxed">
+              Seasoned in writing and experienced in competitive journalism, my
+              many years of creating stories and articles has given me the
+              skillset needed to articulate information and details in a concise
+              and literary manner that is pleasant to read and easy to
+              comprehend.
+            </p>
+            <p className="text-sm md:text-base leading-relaxed mt-2">
+              With these abilities, I have been an Editor-in-Chief of my junior
+              (Virtuoso) and senior (Voice of Miral) years of secondary
+              education. I have since used my prowess to compete in writing and
+              debating competitions throughout my time in tertiary education to
+              keep further hone my skills, and keep my abilities sharp and above
+              the expectations.
+            </p>
           </div>
 
           {/* Education */}
@@ -222,31 +218,9 @@ export default function Page() {
             <h3 className="text-lg md:text-xl font-semibold mb-4">
               🎓 Education
             </h3>
-            <div className="mb-3">
-              <p className="text-sm md:text-lg font-medium">
-                2031 – Juris Doctor
-              </p>
-              <p className="text-sm md:text-lg text-white font-semibold">
-                University of the Philippines Diliman
-              </p>
-              <p className="text-sm md:text-l text-white italic">
-                Quezon City, Philippines
-              </p>
-            </div>
-            <div className="mb-3">
-              <p className="text-sm md:text-lg font-medium">
-                2031 – Masters in Computer Science
-              </p>
-              <p className="text-sm md:text-lg text-white font-semibold">
-                Ateneo de Manila University
-              </p>
-              <p className="text-sm md:text-l text-white italic">
-                Quezon City, Philippines
-              </p>
-            </div>
             <div>
               <p className="text-sm md:text-lg font-medium">
-                2028 – BS in Computer Science
+                2024-Present – B.S. Computer Science
               </p>
               <p className="text-sm md:text-lg text-white font-semibold">
                 Ateneo de Davao University
