@@ -34,16 +34,12 @@ import Image from "next/image";
  */
 
 const skills: { name: string; value: number }[] = [
-  { name: "NodeJS, ReactJS, NextJS", value: 70 },
-  { name: "GraphQL", value: 70 },
-  { name: "Python Fullstack Web Development using Odoo 18/19", value: 90 },
-  {
-    name: "Delphi Desktop and Fullstack Web Development using UNIGUI",
-    value: 90,
-  },
   { name: "HTML, Javascript, CSS", value: 90 },
-  { name: "Database Management using PostgreSQL, MySQL, MS SQL", value: 95 },
-  { name: "CRM (Go High Level, GHL)", value: 80 },
+  { name: "NodeJS, ReactJS, NextJS", value: 75 },
+  { name: "C, C++, C#", value: 80 },
+  { name: "Java", value: 80 },
+  { name: "Database Management using PostgreSQL, MySQL, MS SQL", value: 80 },
+  { name: "Python Fullstack Development", value: 90 },
 ];
 
 const languages: { name: string; value: number }[] = [
@@ -55,7 +51,7 @@ const languages: { name: string; value: number }[] = [
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#1d212c] pt-5">
+    <main className="flex min-h-screen items-center justify-center bg-[#1d212c] pt-5 pb-8">
       <section className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* LEFT COLUMN */}
         <aside className="space-y-6">
@@ -72,9 +68,9 @@ export default function Page() {
               />
             </div>
 
-            <h2 className="mt-4 text-xl font-semibold">Christian Jay Sonza</h2>
-            <p className="text-sm text-white-600 mt-1 italic">
-              Computer Science Professor . Software Engineer . Attorney .
+            <h2 className="mt-4 text-2xl font-semibold">Christian Jay Sonza</h2>
+            <p className="text-sm md:text-lg text-white-600 mt-1 italic">
+              Software Engineer . Attorney . Computer Science Instructor
             </p>
 
             <div className="mt-4 text-left space-y-3 text-sm">
@@ -89,31 +85,22 @@ export default function Page() {
                 <FontAwesomeIcon icon={faEnvelope} color="#FFC03B" />
                 christianjaysonza@gmail.com
               </p>
-              <p className="flex items-center gap-2 text-yellow-400 hover:underline cursor-pointer">
-                <FontAwesomeIcon icon={faYoutube} color="red" /> YouTube Channel
-              </p>
-              <p className="flex items-center gap-2 text-yellow-400 hover:underline cursor-pointer">
-                <FontAwesomeIcon icon={faLinkedin} /> LinkedIn Profile
-              </p>
-              <p className="flex items-center gap-2 text-yellow-400 hover:underline cursor-pointer">
-                <FontAwesomeIcon icon={faGithub} /> JavaScript GitHub Demos
-              </p>
             </div>
           </div>
 
           {/* Skills */}
-          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
-            <h3 className="font-semibold mb-4">Skills</h3>
+          <div className="bg-[#420097] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+            <h3 className="font-semibold mb-4">Programming Languages</h3>
 
             {skills.map((skill) => (
               <div key={skill.name} className="mb-4">
                 <div className="flex justify-between text-sm mb-1">
-                  <span>{skill.name}</span>
-                  <span>{skill.value}%</span>
+                  <span className="text-xs md:text-sm">{skill.name}</span>
+                  <span className="text-xs md:text-sm">{skill.value}%</span>
                 </div>
                 <div className="h-2 bg-gray-200 rounded">
                   <div
-                    className="h-2 bg-blue-600 rounded"
+                    className="h-2 bg-green-600 rounded"
                     style={{ width: `${skill.value}%` }}
                   />
                 </div>
@@ -122,18 +109,18 @@ export default function Page() {
           </div>
 
           {/* Languages */}
-          <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
+          <div className="bg-[#690077] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
             <h3 className="font-semibold mb-4">Languages Spoken</h3>
 
             {languages.map((language) => (
               <div key={language.name} className="mb-4">
                 <div className="flex justify-between text-sm mb-1">
-                  <span>{language.name}</span>
-                  <span>{language.value}%</span>
+                  <span className="text-xs md:text-sm">{language.name}</span>
+                  <span className="text-xs md:text-sm">{language.value}%</span>
                 </div>
                 <div className="h-2 bg-gray-200 rounded">
                   <div
-                    className="h-2 bg-blue-600 rounded"
+                    className="h-2 bg-[#3550e9] rounded"
                     style={{ width: `${language.value}%` }}
                   />
                 </div>
@@ -141,104 +128,130 @@ export default function Page() {
             ))}
           </div>
         </aside>
-
+        {/* -------------------------------------------------------------------------------------------- */}
         {/* RIGHT COLUMN */}
         <section className="lg:col-span-2 space-y-6">
           {/* About Me Header */}
           <header className="flex items-center gap-2">
-            <span className="text-xl">👤</span>
-            <h2 className="text-4xl font-semibold">About Me</h2>
+            <FontAwesomeIcon
+              icon={faUser}
+              className="text-4xl text-yellow-400"
+            />
+            <h2 className="text-3xl md:text-4xl font-semibold">About Me</h2>
           </header>
-
           {/* Software Engineer */}
           <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
-            <h3 className="font-semibold">
-              💠 Software Engineer / Web Developer
+            <h3 className="text-lg md:text-xl font-semibold">
+              💠 Software Engineer / FullStack Developer / Cyber Security Agent
             </h3>
-            <p className="text-sm text-white mb-3">1996 – Present</p>
-            <p className="text-sm leading-relaxed">
-              Highly skilled software development professional bringing talents
-              for software design, development and integration. Offering
-              advanced knowledge of in-demand programming languages. Gained
-              extensive background in writing code and developing software
-              solutions to various local industry clients.
+            <p className="text-sm md:text-lg text-white mb-3">2026 – Present</p>
+            <p className="text-sm md:text-base leading-relaxed">
+              Skilled software developer specializing in design, development,
+              and integration. Proficient in in-demand programming languages
+              with extensive experience delivering software solutions to local
+              industry clients.
             </p>
-            <p className="text-sm leading-relaxed mt-2">
-              Practices exemplary work ethics. Strives to exceed expectations
-              and prioritizes meeting deadlines without supervision. Aggressive
-              yet cheerful with colleagues. Constantly updates and trains on
-              recent developments on technologies and platforms, well trained in
-              ReactJS, NextJS, GraphQL and Odoo.
+            <p className="text-sm md:text-base leading-relaxed mt-2">
+              Demonstrates strong professional integrity and commitment to
+              excellence. Takes ownership of responsibilities and consistently
+              delivers quality work on schedule. Maintains a positive,
+              collaborative attitude while staying current with emerging
+              technologies and industry trends. Brings extensive expertise in
+              full-stack web and application development, with particular
+              proficiency in cyber security.
             </p>
-            <p className="text-sm leading-relaxed mt-2">
-              Specializes in modernizing legacy systems using Delphi, UniGUI and
-              C#. An experienced Database Administrator with actual experience
-              in Windows Server Failover Clustering and Replication. An avid
-              Linux and Ubuntu user. Underwent training in CRM using Go High
-              Level (GHL).
+            <p className="text-sm md:text-base leading-relaxed mt-2">
+              Specializes in modernizing legacy systems using C# and C++, with
+              deep expertise in cyber security. Brings hands-on experience in
+              robotics and automation programming using Python. Passionate
+              advocate for open-source solutions and leveraging emerging
+              technologies to create accessible, sustainable software that
+              empowers organizations and communities.
             </p>
           </div>
 
           {/* Instructor */}
           <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
-            <h3 className="font-semibold">
+            <h3 className="text-lg md:text-xl font-semibold">
               💠 Computer Science Instructor, Ateneo de Davao University
             </h3>
-            <p className="text-sm text-white mb-3">November 1987 – Present</p>
-            <p className="text-sm leading-relaxed">
-              Conducts actual classroom instruction designed to achieve course
-              objectives aligned with the school’s mission and vision.
-              Collaborates with industry, makes project proposals for software
-              development, and develops and implements software solutions for
-              various aspects of operations.
+            <p className="text-sm md:text-lg text-white mb-3">
+              September 2028 – Present
             </p>
-            <p className="text-sm leading-relaxed mt-2">
-              Mentors students, fostering a collaborative learning environment
-              that promotes innovation and knowledge sharing with industry
-              partners. Maintains very high standards in delivering classes and
-              is very rarely late or absent.
+            <p className="text-sm md:text-base leading-relaxed">
+              Delivers engaging classroom instruction to fulfill course learning
+              outcomes in alignment with institutional goals. Partners with
+              industry stakeholders, proposes innovative software development
+              projects, and creates tailored software solutions to support
+              organizational operations.
+            </p>
+            <p className="text-sm md:text-base leading-relaxed mt-2">
+              Guides students through collaborative learning experiences that
+              encourage creative problem-solving and partnership with industry
+              professionals. Maintains exceptional teaching standards with
+              outstanding attendance and punctuality.
             </p>
           </div>
 
           {/* Author */}
           <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
-            <h3 className="font-semibold">
-              💠 Author of Various YouTube Instructional Videos
+            <h3 className="text-lg md:text-xl font-semibold">
+              💠 Attorney VI (Department of Education)
             </h3>
-            <p className="text-sm text-white mb-3">2021 – Present</p>
-            <p className="text-sm leading-relaxed">
-              Instructional videos on History of Computing, Boolean Logic and
-              Circuitverse, Assembly Language Programming, Database Desktop
-              Development using C#, and Introduction to JavaScript, HTML and
-              CSS.
+            <p className="text-sm md:text-lg text-white mb-3">2033 - Present</p>
+            <p className="text-sm md:text-base leading-relaxed">
+              During Senior High School (SHS), was a prominent and actively
+              participating member of Student Leadership engagements throughout
+              the Philippines. Has been a President of the Supreme Secondary
+              Learner Government in a Division(Davao del Sur) and Regional
+              (Region XI), and has been part of the National Federation of
+              Supreme Secondary Learner Government (NFSSLG) of batch 2023.
             </p>
-            <p className="text-sm mt-2 text-blue-600 hover:underline cursor-pointer">
+            <p className="text-sm md:text-base leading-relaxed mt-2">
+              Has since participated in many speaker roles throughout Region XI
+              and continues to serve the people of the Philippines as an
+              Attorney for the Department of Education.
+            </p>
+            {/* <p className="text-sm md:text-lg mt-2 text-blue-600 hover:underline cursor-pointer">
               www.youtube.com/@roytek7667/playlists
-            </p>
+            </p> */}
           </div>
 
           {/* Education */}
           <div className="bg-[#3c569c] rounded-2xl shadow p-6 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl">
-            <h3 className="font-semibold mb-4">🎓 Education</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-4">
+              🎓 Education
+            </h3>
             <div className="mb-3">
-              <p className="text-sm font-medium">
-                1996 – Masters in Computer Science
+              <p className="text-sm md:text-lg font-medium">
+                2031 – Juris Doctor
               </p>
-              <p className="text-sm text-white font-semibold">
+              <p className="text-sm md:text-lg text-white font-semibold">
+                University of the Philippines Diliman
+              </p>
+              <p className="text-sm md:text-l text-white italic">
+                Quezon City, Philippines
+              </p>
+            </div>
+            <div className="mb-3">
+              <p className="text-sm md:text-lg font-medium">
+                2031 – Masters in Computer Science
+              </p>
+              <p className="text-sm md:text-lg text-white font-semibold">
                 Ateneo de Manila University
               </p>
-              <p className="text-sm text-white font-semibold">
+              <p className="text-sm md:text-l text-white italic">
                 Quezon City, Philippines
               </p>
             </div>
             <div>
-              <p className="text-sm font-medium">
-                1987 – BS in Management Engineering
+              <p className="text-sm md:text-lg font-medium">
+                2028 – BS in Computer Science
               </p>
-              <p className="text-sm text-white font-semibold">
+              <p className="text-sm md:text-lg text-white font-semibold">
                 Ateneo de Davao University
               </p>
-              <p className="text-sm text-white font-semibold">
+              <p className="text-sm md:text-l text-white italic">
                 Davao City, Philippines
               </p>
             </div>
